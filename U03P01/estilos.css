@@ -1,0 +1,79 @@
+/* Regla 1 */
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  color: #242424;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 20px;
+  color: #606060;
+  font-weight: 800;
+}
+
+/* Regla 4 */
+p {
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+ 
+ul {
+    font-family: monospace;
+    font-size: 18px;
+    list-style: none;
+    padding-left: 10px;
+  }
+
+/* Regla 6 */
+a {
+  font-weight: bold;
+}
+
+/* Regla 7 */
+li a {
+  color: orange;
+  text-decoration: underline;
+}
+
+/* Regla 8 */
+ul {
+  margin-left: 100px;
+  padding: 20px;
+  max-width: 40%;
+  border: 2px solid blue;
+}
+
+/* Regla 9 */
+li:nth-child(2n+1) {
+  background-color: #D9F9E4;
+}
+
+/* Regla 10 */
+li:nth-child(4), li:nth-child(5) {
+  color: green;
+}
+
+/* Regla 11 */
+li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Regla 12 */
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+/* Regla 13 */
+ul {
+  list-style: none;
+}
+
+/* Regla 14 */
+li {
+  padding: 10px;
+}
