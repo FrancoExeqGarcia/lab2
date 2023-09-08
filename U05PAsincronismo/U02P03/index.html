@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body onload="changeImage();">
+    <!-- Encabezado -->
+    <header>
+        <h1>Hola mundo!</h1>
+        <h2>Bienvenido a mi página web</h2>
+    </header>
+    <div class="container"> 
+        <nav>
+            <ul>
+                <li><a href="/U02P03/index.html" target="_blank">Inicio</a></li>
+                <li><a href="multimedia.html" target="_blank">Multimedia</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav> 
+        <main>
+            <div class="container">
+                <section>
+
+                </section><br>
+                <form action="" id="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre"> <br> <br>
+                    <label for="color">Color preferido: </label>
+                    <input type="color" id="color" oninput="changeBackgroundColor()">
+                    
+                </form>
+            </div>
+        </main> 
+        <div class="right">
+            <h2>Información importante</h2>
+            <p>Mantenete informado mediante nuestro sitio web y recibi la info por e-mail</p>
+        </div>
+    </div> 
+    <footer>
+        <p>© grupo 2 & ASOCIADOS. lab de computacion</p>
+    </footer>
+</body>
+<script>
+    var imagenes = ["imagen/lago.jpg", 'imagen/monte.jpg', 'imagen/images.jpg'];
+
+    function changeImage() {
+        var seccion = document.querySelector('section');
+        var currentIndex = imagenes.findIndex(image => seccion.style.backgroundImage.includes(image));
+        var nextIndex = (currentIndex + 1) % imagenes.length;
+        seccion.style.backgroundImage = 'url(' + imagenes[nextIndex] + ')';
+        seccion.style.backgroundSize = 'contain';
+        seccion.style.backgroundPosition = 'center';
+    }
+
+    setInterval(changeImage, 3000);
+
+    function changeBackgroundColor() {
+        var colorInput = document.getElementById("color");
+        var body = document.body;
+        body.style.backgroundColor = colorInput.value;
+    }
+</script>
+
+</html>
